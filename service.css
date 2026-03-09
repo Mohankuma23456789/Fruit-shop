@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(120deg, #f1f8e9, #ffffff);
+}
+
+.services {
+  padding: 70px 8%;
+  text-align: center;
+}
+
+.services h1 {
+  font-size: 40px;
+  color: red;
+  margin-bottom: 10px;
+}
+
+.services p {
+  color: #555;
+  margin-bottom: 50px;
+  font-size: 15px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  position: relative;
+  background: #fff;
+  padding: 35px 22px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: 0.4s ease;
+  overflow: hidden;
+}
+.nback {
+  position: relative;
+   left:-500px;
+  padding: 5px;
+  width: 100px;
+  border: 0px;
+  top: px;
+  background-color: yellow;
+  border-radius: 5px;
+}
+
+.nback:hover {
+  background-color: red;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  background: linear-gradient(120deg, #66bb6a, #ffb300, #66bb6a);
+  opacity: 0;
+  transition: 0.4s;
+  z-index: -1;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-card:hover {
+  transform: translateY(-12px) scale(1.02);
+}
+
+.service-icon {
+  width: 65px;
+  height: 65px;
+  background: linear-gradient(135deg, #66bb6a, #43a047);
+  color: #fff;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 18px;
+  transition: 0.5s;
+}
+
+.service-card:hover .service-icon {
+  transform: rotate(360deg) scale(1.1);
+  background: linear-gradient(135deg, #ff9800, #ffb300);
+}
+
+.service-card h3 {
+  font-size: 18px;
+  color: red;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.service-btn {
+  margin-top: 18px;
+  display: inline-block;
+  padding: 8px 18px;
+  background: red;
+  color: #fff;
+  border-radius: 25px;
+  font-size: 12px;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.service-card:hover .service-btn {
+  background: #ff9800;
+  transform: scale(1.1);
+}
